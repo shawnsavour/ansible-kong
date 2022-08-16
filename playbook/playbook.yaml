@@ -1,6 +1,8 @@
-- hosts: all  
-
-  become: yes  
-
+#ansible playbook
+- hosts: all
+  become: yes
   tasks:
-   - ping
+    - name: ping
+      ansible.builtin.ping:
+        crash: data
+
