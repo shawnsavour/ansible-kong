@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-    - name: ping
-      ansible.builtin.ping:
-        crash: data
-
+    - name: Curl the package
+      shell: curl -Lo kong-enterprise-edition-2.8.1.3.amzn2.noarch.rpm "https://download.konghq.com/gateway-2.x-amazonlinux-2/Packages/k/kong-enterprise-edition-2.8.1.3.amzn2.noarch.rpm"
+    - name: check the curl
+      shell: ls
